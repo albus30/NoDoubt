@@ -38,8 +38,8 @@ app.use(morgan('dev')); // reads all requests user has
 app.use(session({
   resave: true, // save session in session store
   saveUninitialized: true,
-  secret: "albusajsjsj",
-  store: new MongoStore({ url: 'mongodb://admin:adminpw@ds159662.mlab.com:59662/alchemynewsletter' })
+  secret: "degsaajsjsj",
+  store: new MongoStore({ url: 'mongodb://<redacted>' }) // fill in keys 
 }));
 app.use(flash());
 
@@ -54,10 +54,10 @@ app.route('/')
     // capture user's email
     // console.log(req.body.email);
     request({
-      url: 'https://us16.api.mailchimp.com/3.0/lists/411a1a90a9/members',
+      url: '<redacted>',
       method: 'POST',
       headers: {
-        'Authorization': 'randomUser 7cfd3e00e3e5bc0102c8fd2f0162897d-us16',
+        'Authorization': 'randomUser <redacted>',
         'Content-Type': 'application/json'
       },
       json: {
