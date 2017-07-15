@@ -43,9 +43,6 @@ app.use(session({
 }));
 app.use(flash());
 
-// api key
-// --url 'https://us16.api.mailchimp.com/3.0/lists/411a1a90a9/members
-
 app.route('/')
   .get((req, res, next) => {
     res.render('main/home', { message: req.flash('success') });
